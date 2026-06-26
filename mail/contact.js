@@ -15,26 +15,33 @@ $(function () {
             $this.prop("disabled", true);
 
             $.ajax({
-                url: 'https://formsubmit.co/ajax/info@supremesolar.co.zw',
+                url: '/workers/contact-worker',
                 type: 'POST',
                 dataType: 'json',
-                data: {
+                contentType: 'application/json',
+                data: JSON.stringify({
                     name: name,
                     email: email,
                     subject: subject,
-                    message: message,
-                    _captcha: 'false',
-                    _template: 'table'
-                },
-                success: function () {
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                    $('#success > .alert-success')
-                            .append("<strong>Thank you! Your message has been sent successfully.</strong>");
-                    $('#success > .alert-success')
-                            .append('</div>');
-                    $('#contactForm').trigger("reset");
+                    message: message
+                }),
+                success: function (response) {
+                    if (response && response.success) {
+                        $('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                                .append("</button>");
+                        $('#success > .alert-success')
+                                .append("<strong>" + response.message + "</strong>");
+                        $('#success > .alert-success')
+                                .append('</div>');
+                        $('#contactForm').trigger("reset");
+                    } else {
+                        $('#success').html("<div class='alert alert-danger'>");
+                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                                .append("</button>");
+                        $('#success > .alert-danger').append($("<strong>").text(response && response.message ? response.message : "Sorry " + name + ", your message could not be sent right now. Please try again later or contact us directly."));
+                        $('#success > .alert-danger').append('</div>');
+                    }
                 },
                 error: function () {
                     $('#success').html("<div class='alert alert-danger'>");
