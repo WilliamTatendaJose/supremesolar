@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Supreme Solar Systems",
+  "url": "https://www.supremesolar.co.zw",
+  "telephone": "+263771557002",
+  "email": "info@supremesolar.co.zw",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "34 Anderson Avenue",
+    "addressLocality": "Harare",
+    "addressCountry": "ZW"
+  },
+  "description": "Supreme Solar Systems provides solar installation, borehole drilling, surveying, pump installation, and maintenance services in Zimbabwe.",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Zimbabwe"
+  },
+  "sameAs": [
+    "https://www.facebook.com/SupremeSolarSystemsZimbabwe",
+    "https://www.instagram.com/supremesolarsystems/"
+  ]
+}
