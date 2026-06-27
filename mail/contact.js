@@ -10,12 +10,14 @@ $(function () {
             var email = $("input#email").val();
             var subject = $("input#subject").val();
             var message = $("textarea#message").val();
+            var company = $("input#company").val();
 
             var $this = $("#sendMessageButton");
-            $this.prop("disabled", true);
+            var originalText = $this.text();
+            $this.prop("disabled", true).text("Sending...");
 
             $.ajax({
-                url: '/workers/contact-worker',
+                url: '/api/contact',
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json',
@@ -23,7 +25,8 @@ $(function () {
                     name: name,
                     email: email,
                     subject: subject,
-                    message: message
+                    message: message,
+                    company: company
                 }),
                 success: function (response) {
                     if (response && response.success) {
@@ -52,7 +55,7 @@ $(function () {
                 },
                 complete: function () {
                     setTimeout(function () {
-                        $this.prop("disabled", false);
+                        $this.prop("disabled", false).text(originalText);
                     }, 1000);
                 }
             });

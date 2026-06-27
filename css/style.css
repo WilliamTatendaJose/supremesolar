@@ -9652,3 +9652,70 @@ h4, h5, h6 {
   padding: 0;
   list-style-type: none;
 }
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .35);
+  z-index: 1030;
+  transition: transform .2s ease;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Sticky mobile call-to-action bar */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1029;
+  background: #1a1a1a;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, .3);
+}
+
+.mobile-cta-bar a {
+  flex: 1;
+  text-align: center;
+  padding: 14px 8px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mobile-cta-bar a.cta-call {
+  background: #009CFF;
+}
+
+.mobile-cta-bar a.cta-quote {
+  background: #25D366;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 54px;
+  }
+
+  .whatsapp-float {
+    bottom: 70px;
+  }
+}

@@ -48,11 +48,16 @@
     <link href="img/icon.svg" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Hero image preload for faster LCP -->
+    <link rel="preload" as="image" href="img/carousel-1.jpg">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -93,7 +98,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;" alt="Solar installation in Zimbabwe" fetchpriority="high" decoding="async">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Reliable Solar Solutions</h4>
@@ -104,7 +109,7 @@
                     </div>
                 </div>
                 <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;" alt="Borehole drilling in Zimbabwe" loading="lazy" decoding="async">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Water & Energy Systems</h4>
@@ -135,7 +140,7 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class="img-fluid mb-4 mb-lg-0" src="img/about.jpg" alt="Supreme Solar Systems technician installing a solar power system in Zimbabwe">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/about.jpg" alt="Supreme Solar Systems technician installing a solar power system in Zimbabwe" loading="lazy" decoding="async">
                 </div>
                 <div class="col-lg-7">
                     <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">About Us</h6>
@@ -200,7 +205,7 @@
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="img/product-1.jpg" alt="Solar installation service by Supreme Solar Systems">
+                            <img class="img-fluid" src="img/product-1.jpg" alt="Solar installation service by Supreme Solar Systems" loading="lazy" decoding="async">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
@@ -214,7 +219,7 @@
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="img/product-2.jpg" alt="Borehole drilling and survey service">
+                            <img class="img-fluid" src="img/product-2.jpg" alt="Borehole drilling and survey service" loading="lazy" decoding="async">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
@@ -228,7 +233,7 @@
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="img/product-3.jpg" alt="Solar and water system maintenance service">
+                            <img class="img-fluid" src="img/product-3.jpg" alt="Solar and water system maintenance service" loading="lazy" decoding="async">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong3">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
@@ -253,37 +258,37 @@
         </div>
         <div class="owl-carousel gallery-carousel">
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="Solar and borehole project gallery photo 1" loading="lazy" decoding="async">
                 <a class="btn btn-primary" href="img/gallery-1.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="Solar and borehole project gallery photo 2" loading="lazy" decoding="async">
                 <a class="btn btn-primary" href="img/gallery-2.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="Solar and borehole project gallery photo 3" loading="lazy" decoding="async">
                 <a class="btn btn-primary" href="img/gallery-3.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="Solar and borehole project gallery photo 4" loading="lazy" decoding="async">
                 <a class="btn btn-primary" href="img/gallery-4.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="Solar and borehole project gallery photo 5" loading="lazy" decoding="async">
                 <a class="btn btn-primary" href="img/gallery-5.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="Solar and borehole project gallery photo 6" loading="lazy" decoding="async">
                 <a class="btn btn-primary" href="img/gallery-6.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
@@ -340,6 +345,9 @@
                     <div class="contact-form">
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group" style="position:absolute; left:-9999px;" aria-hidden="true">
+                                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+                            </div>
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
                                     <input type="text" class="form-control bg-secondary border-0 py-4 px-3" id="name" name="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
@@ -450,7 +458,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img class="img-fluid mb-4" src="img/carousel-1.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/carousel-1.jpg" alt="Solar Energy System" loading="lazy" decoding="async">
                     <p>Our solar power systems are designed to lower energy costs while keeping your property powered reliably through Zimbabwe’s changing grid conditions.</p>
                     <p>We assess your energy needs, roof layout, and budget to recommend the right system layout, whether it is a compact residential installation or a larger commercial setup.</p>
                     <ul>
@@ -476,7 +484,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img class="img-fluid mb-4" src="img/product-2.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/product-2.jpg" alt="Borehole Drilling and Surveying" loading="lazy" decoding="async">
                     <p>We provide borehole drilling and surveying services that help clients locate and access dependable water sources with accuracy and care.</p>
                     <p>Our team supports the full process from site assessment and survey work to drilling and pump installation, ensuring your water system is practical and built to last.</p>
                     <ul>
@@ -502,7 +510,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img class="img-fluid mb-4" src="img/product-3.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/product-3.jpg" alt="Repairs and maintenance" loading="lazy" decoding="async">
                     <p>We offer maintenance and repair services to keep your solar and water systems performing at their best even after the initial installation.</p>
                     <p>Whether you need a system check, pump repair, inverter troubleshooting, or preventive servicing, our team is ready to respond quickly and professionally.</p>
                     <ul>
@@ -523,23 +531,34 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+263771557002?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20solar%2Fborehole%20services" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="tel:+263771557002" class="cta-call"><i class="fa fa-phone mr-1"></i> Call Now</a>
+        <a href="#contact" class="cta-quote btn-scroll"><i class="fa fa-bolt mr-1"></i> Get a Quote</a>
+    </div>
+
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" defer></script>
+    <script src="lib/easing/easing.min.js" defer></script>
+    <script src="lib/waypoints/waypoints.min.js" defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
+    <script src="lib/isotope/isotope.pkgd.min.js" defer></script>
+    <script src="lib/lightbox/js/lightbox.min.js" defer></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-    <script src="js/site-content.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js" defer></script>
+    <script src="mail/contact.js" defer></script>
+    <script src="js/site-content.js" defer></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
