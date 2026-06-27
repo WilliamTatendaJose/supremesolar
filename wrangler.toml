@@ -1,8 +1,9 @@
-name = "supreme-solar-website"
+# wrangler.toml
+name = 'supremesolar'
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "."
 
 [[d1_databases]]
 binding = "LEADS_DB"
 database_name = "supreme-solar-leads"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "4056e6b6-b8ee-4fa8-bbbc-08b6e7c0ec36"
