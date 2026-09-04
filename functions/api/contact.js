@@ -21,6 +21,7 @@ export async function onRequestPost({ request, env }) {
   const location = (data.location || '').toString().trim();
   const subject = (data.subject || service || 'Website quote request').toString().trim();
   const source = (data.source || 'website').toString().trim().slice(0, 50);
+  const estimate = (data.estimate || '').toString().trim().slice(0, 300);
   let message = (data.message || '').toString().trim();
   const honeypot = (data.company || '').toString().trim();
 
@@ -90,7 +91,7 @@ export async function onRequestPost({ request, env }) {
           to: [env.TO_EMAIL],
           reply_to: email || undefined,
           subject: `🔥 New quote request: ${service || subject} — ${name} (${location || 'no location'})`,
-          text: `New website lead (${source})\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email || '-'}\nService: ${service || '-'}\nLocation: ${location || '-'}\n\nDetails:\n${message}`
+          text: `New website lead (${source})\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email || '-'}\nService: ${service || '-'}\nLocation: ${location || '-'}${estimate ? `\nEstimate shown: ${estimate}` : ''}\n\nDetails:\n${message}`
         })
       });
       emailSent = response.ok;
